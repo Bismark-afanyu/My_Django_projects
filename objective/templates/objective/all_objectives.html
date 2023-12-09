@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Objectives</title>
+</head>
+<body>
+    <h1>All Objectives</h1>
+    <ul>
+        {% for objective in objectives %}
+            <li>
+                <h2>{{ objective.title }}</h2>
+                <!-- <p>Description: {{ objective.description }}</p>
+                <p>Start Date: {{ objective.start_date }}</p>
+                <p>End Date: {{ objective.end_date }}</p> -->
+                <a href="{% url 'objective_details' objective.id %}">View Details</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
